@@ -19,3 +19,51 @@ Get-Help under administrator:
 	Parameter is way more detailed. It includes a description of what each function does. It also gives six examples. 
 gci - fi shell_assignment.txt
 	This filtered the rest of the files and just showed the Mode, LastWriteTime, Length and Name for shell_assignment.txt.
+
+2.1 Looking Around 
+Get_Location/pwd
+	Currently on CLI assignment. Used "cd \shell_magic\ to change the file. 
+	Used pwd to check this. 
+	now on shell_magic file. 
+	No I do not see colours. 
+
+2.2 Moving Around
+cd stands for change directory. 
+cd .. 
+	This made it use the file that it was originally in. So it is now looking at the CLI assignment folder instead of shell_magic.
+cd tab 
+	Used this to move back to the folder I started aat to get back to the shell_magic folder. 
+
+3.1 Creating an emptyfile
+New-Item/ni
+	When doing this, I ran into a problem. It asks for the path and to supply the values for the following parameters. 
+
+3.2 Making directories 
+New-Item command, -ItemType 
+	I used the command New-Item -ItemType Directory Hello_World
+
+3.3 Moving and Renaming Files
+	I was not able to create a hello_world file as there is one that is already created. 
+hello_world.bfe 
+	It worked! I used New-Item -ItemType Directory hello_world.bfe
+Moving hello_world.txt 
+	I used Move-Item '.\hello world' .\hello_world.bfe\
+Moving hello_world.txt back to shell_magic.
+	I used the command: Move-Item '.\hello world' .\shell_magic\
+*I made a mistake. I had an extra folder called shell_magic in the shell_magic folder which caused confusion. I accidentaly made a folder instead of a file called hello_world.bfe. I also had a problem where the hello_world.txt was in this folder, and was accidentaly renamed to shell_magic when trying to move this back to the shell_magic folder. To fix this issue, I first used Remove-Item -Recurse to remove the shell_magic folder and did the same with the hello_world.bfe file. I then used New-Item to create a hello_world.txt file. I then moved this file into the hello_world. I then moved this file back into the current direcotry by using ".". Then I made the hello_world folder the working directory and used ".." to move the hello_world.txt back into shell_magic using: Move-Item .\hello_world.txt ..
+
+3.4 Copying Files
+Difference between moving and copying a file is that the file you are copying will be in more than one folder.
+Copying hello_world.txt
+	I used copy-item .\hello_world.txt .\hello_world\ to move the text into the hello_world folder from the shell_magic folder.
+Rename hello_world.txt
+	To rename the file I first made the hello_world folder the working directory. Then I did: Rename-Item .\hello_world.txt .\world_hello.txt
+
+
+3.5 Removing Files and Directories
+Remove hello_world.txt from shell_magic
+	I used Remove-Item .\hello_world.txt
+Remove world_hello.txt from hello_world 
+	I made hello_world the working directory and used Remove-Item .\world_hello.txt
+Remove the whole hello_world folder 
+	I made shell_magic the working directory and then used Remove-Item .\hello_world
