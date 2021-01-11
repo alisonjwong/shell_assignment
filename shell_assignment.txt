@@ -67,3 +67,18 @@ Remove world_hello.txt from hello_world
 	I made hello_world the working directory and used Remove-Item .\world_hello.txt
 Remove the whole hello_world folder 
 	I made shell_magic the working directory and then used Remove-Item .\hello_world
+
+4 Working with File Contents
+4.1 Displaying file contents
+Get-Content
+	When using this for the hello_world.txt file in the shell_magic folder, it asks for the path. 
+
+4.2 Redirecting Standard Output with > and >>
+Write-Output
+	When using Write-Output command it syas InputObject[0]. 
+Echo (>)
+	I created the new file using New-Item, then I did echo 'file contents' >. \file.txt
+Echo (>>) 
+	I did echo 'more contents' >> .\file.txt 
+
+4.3 Prevent Cluttering your Terminal 
