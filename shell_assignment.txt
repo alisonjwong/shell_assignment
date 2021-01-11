@@ -1,0 +1,21 @@
+1.1 Commands
+Get_ChiltItem has four columns with the names of Mode, LastWriteTIme, Length and Name. 
+	The mode shows something like "d-----" and "-a----".
+	LastWrteTime shows when the file was last accessed/edited. 
+	The length shows nothing or "0".
+	The name displays the name of the file. 
+
+Get-Alias has three columns: CommandType, Name, and Version.
+	CommandType always shows "Alias".
+	Name shows a long list of different shorthand commands such as "% -> ForEach-Object", "compare -> Compare-Object", "diff -> Compare-Object". 
+	Verion shows the version it is: "3.1.0.0"
+
+1.2 Getting some help
+Get-Help ri showed the Name, Syntax, Aliases, and Remarks.
+When added with -Detailed, an extra paragraph was shown; Parameters.
+	This showed "-Confirm, -Credential <pscredential>, Exclude <string[]>", etc. 
+Get-Help under administrator:
+	It added a Description paragraph. 
+	Parameter is way more detailed. It includes a description of what each function does. It also gives six examples. 
+gci - fi shell_assignment.txt
+	This filtered the rest of the files and just showed the Mode, LastWriteTime, Length and Name for shell_assignment.txt.
